@@ -24,7 +24,7 @@ export default function Home() {
       {/* Portofolio */}
       <Portofolio />
       {/* Partner */}
-      <Partner />
+      {/* <Partner /> */}
       {/* Footer */}
       <Footer />
     </main>
