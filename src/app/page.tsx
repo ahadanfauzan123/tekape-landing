@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="text-gray-600 flex min-h-screen flex-col items-center justify-between bg-gray-100">
+    <main className="text-gray-600 scroll-smooth bg-white flex min-h-screen w-screen flex-col items-center justify-between">
       {/* navbar */}
       <Navbar />
       {/* Header */}

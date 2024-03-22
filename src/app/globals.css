@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* swiper */
+html {
+      scroll-behavior: smooth;
+    }
+    body {
+      overflow-x: hidden;
+      /* yakan */
+    }
+    
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+    
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0);
+    }
+    
+    /* Mengatur warna thumb scrollbar */
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(28, 28, 28); /* Warna merah untuk thumb scrollbar */
+      border-radius: 10px;
+      cursor: grab;
+    }

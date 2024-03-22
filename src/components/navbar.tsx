@@ -1,11 +1,27 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../../public/img/navbar/logo.png'
 import Link from 'next/link'
 
 function Navbar() {
+  const [showNavbar, setShowNavbar] = useState<boolean>(false);
+      useEffect(() => {
+        const scrollHeader = () => {
+          if(window.scrollY >= 20) {
+            setShowNavbar(true)
+          } else {
+            setShowNavbar(false)
+          }
+        }
+        window.addEventListener('scroll', scrollHeader);
+        return () => {
+          window.removeEventListener('scroll', scrollHeader);
+        }
+    
+      }, []);
   return (
-    <div className='bg-white shadow-sm shadow-gray-200 w-screen h-[90px] px-[5vw] flex items-center justify-between'>
+    <div className={`${showNavbar===false? "bg-transparent" : "bg-white shadow-sm shadow-gray-200 transition-all ease-in duration-300"} fixed z-50 top-0 left-0 w-screen h-[90px] px-[5vw] flex items-center justify-between`}>
       {/* lefy */}
       <div className='flex items-center justify-start space-x-2'>
             <Image priority quality={100} alt="image" src={Logo} width={800} height={500} className='w-[160px] h-[50px]' />
