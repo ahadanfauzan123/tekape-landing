@@ -23,26 +23,28 @@ function Service() {
             <Card name="CUSTOM" price={3500000} custom={true} />
       </div>   
       {/* sm */}
-      <Swiper
-      slidesPerView={1.2}
-      autoplay={{
-        delay: 7000,
-        disableOnInteraction: false,
-      }}
-      pagination={true}
-        modules={[ Autoplay, Pagination]}
-        className="mySwiper "
-      >
-        <SwiperSlide>
-          <Card name="STARTER" price={3500000} custom={false} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card name="BUSINESS" price={4000000} custom={false} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card name="CUSTOM" price={3500000} custom={true} />
-        </SwiperSlide>
-      </Swiper>
+      <div className=' w-screen flex lg:hidden'>
+        <Swiper
+        slidesPerView={1.2}
+        autoplay={{
+          delay: 7000,
+          disableOnInteraction: false,
+        }}
+        pagination={true}
+          modules={[ Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <Card name="STARTER" price={3500000} custom={false} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card name="BUSINESS" price={4000000} custom={false} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card name="CUSTOM" price={3500000} custom={true} />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   )
 }
