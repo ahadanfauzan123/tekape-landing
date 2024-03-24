@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from "next/image"
-import Logo from "../../public/img/navbar/logo.png"
+import Logo from "../../public/img/navbar/logo1.png"
 
 function Footer() {
   return (
-      <div className="bg-blue-800 mt-[240px] px-8 pt-16 mx-auto w-screen md:px-24 lg:px-8">
+      <div className="bg-blue-900 mt-[240px] px-8 pt-16 mx-auto w-screen md:px-24 lg:px-8">
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2">
           <a
@@ -14,9 +14,9 @@ function Footer() {
             className="inline-flex items-center"
           >
             <Image alt="lambang" src={Logo} width={900} height={900} className='w-[100px] h-[45px]' />
-            <span className="ml-2 text-xl font-bold tracking-wide text-gray-300 uppercase">
-              TEKAPE
-            </span>
+            {/* <span className="ml-2 text-xl font-bold tracking-wide text-gray-300 uppercase">
+              CodeCraft
+            </span> */}
           </a>
           <div className="mt-6 lg:max-w-sm">
             <p className="text-sm text-gray-300">

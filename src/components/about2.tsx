@@ -4,9 +4,9 @@ import { FiUserCheck } from "react-icons/fi";
 import { BsStar } from "react-icons/bs";
 function About2() {
   return (
-    <div className='w-[90%] mx-auto min-h-screen flex flex-col space-y-8 justify-center items-center'>
-      <h1 className="text-start text-[42px] font-extrabold "><span className="">kenapa Memilih Kami?</span></h1>
-      <div className='flex-[0.65] w-full flex items-center justify-center space-x-5'>
+    <div id='plus' className='w-[90%] mx-auto min-h-screen flex flex-col space-y-8 justify-center items-center'>
+      <h1 className="text-start text-[42px] font-extrabold "><span className="">Mengapa Memilih Kami?</span></h1>
+      <div className='flex-1 lg:flex-[0.65] w-full flex flex-col lg:flex-row space-y-5 lg:space-y-0 items-center justify-center space-x-0 lg:space-x-5'>
             <div className="max-w-sm px-4 py-12 h-full bg-white border border-gray-200 rounded-lg shadow flex flex-col items-center justify-start space-y-4 ">
                   <div className='w-[100px] h-[100px] bg-gray-200 rounded-[50%] flex items-center justify-center'>
                   <MdOutlineHandshake className='w-[68px] h-[68px] text-blue-300' />
@@ -20,7 +20,6 @@ function About2() {
             <div className="max-w-sm px-4 py-12 h-full bg-white border border-gray-200 rounded-lg shadow flex flex-col items-center justify-start space-y-4 ">
                   <div className='w-[100px] h-[100px] bg-gray-200 rounded-[50%] flex items-center justify-center'>
                   <FiUserCheck className='w-[52px] h-[52px] text-blue-300' />
-
                   </div>
             <a href="#">
                   <h5 className="mb-2 text-3xl font-bold tracking-tight">Profesional</h5>

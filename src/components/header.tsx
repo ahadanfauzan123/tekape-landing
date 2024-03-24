@@ -13,6 +13,7 @@ import Image from 'next/image';
 import Banner1 from "../../public/img/banner/banner1.png"
 import Banner2 from "../../public/img/navbar/logo.png"
 import { motion, Variants } from 'framer-motion';
+import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 
 function Header() {
       const titleVariant1: Variants = {
@@ -34,7 +35,7 @@ function Header() {
 
       
   return (
-      <div id="home" className={`  z-20 h-[48vh] lg:h-screen w-screen relative flex items-center justify-center`} >
+      <div id="home" className={`z-20 h-screen w-screen relative flex items-center justify-center`} >
       <Swiper
       autoplay={{
         delay: 7000,
@@ -60,15 +61,21 @@ function Header() {
       viewport={{ once: true, amount: 0.8 }}
       variants={titleVariant1}
       className='text-white w-[75%] font-extrabold absolute left-[8vw] z-40 flex items-start justify-start flex-col space-y-7 '>
-            <h1 className="text-6xl font-extrabold">
-            Elevate Your Business Strategy with a Trusted Consultant
+            <h1 className="text-5xl lg:text-6xl font-extrabold">
+            Code Craft: Membuat Website, Menghadirkan Bisnis Anda ke Dunia Online
             </h1>
-            <p className='text-gray-50 text-sm font-light w-[75%]'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat perspiciatis aliquam laboriosam eum in autem at laudantium tenetur accusamus odio, error maxime vitae, pariatur vel quidem.</p>
+            <p className='text-gray-50 text-sm font-light w-[75%]'>
+            Mengukir Masa Depan Digital Bisnis Anda : Menekankan pada bagaimana penggunaan kode dapat membentuk masa depan digital yang cerah bagi bisnis Anda.
+            </p>
             <div className='flex items-center justify-start space-x-6 font-normal'>
-                  <a href="/" className='bg-blue-600 px-7 py-3 text-lg text-white rounded-xl'>See More</a>
-                  <a href="/" className='bg-blue-600 px-7 py-3 text-lg text-white rounded-xl'>Contact</a>
+                  <a href="#plus" className='bg-blue-600 px-7 py-3 text-lg text-white rounded-xl'>See More</a>
+                  <a href="#contact" className='bg-blue-600 px-7 py-3 text-lg text-white rounded-xl'>Contact</a>
             </div>
       </motion.div>
+      <a href="#about" className=" absolute right-6 lg:right-[50%] bottom-6 lg:bottom-6 z-40">
+      <HiOutlineChevronDoubleDown className='text-white h-10 w-10 animate-bounce' />
+
+      </a>
     </div>
   )
 }

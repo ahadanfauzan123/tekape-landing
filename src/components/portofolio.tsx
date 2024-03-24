@@ -16,7 +16,7 @@ import Project1 from "../../public/img/banner/banner1.png"
 
 function Portofolio() {
       return (
-    <div id='projects' className='mt-[120px]  w-screen py-12 flex flex-col items-center justify-start space-y-12'>
+    <div id='portofolio' className='mt-[120px]  w-screen py-12 flex flex-col items-center justify-start space-y-12'>
       <h1 className="text-4xl z-20 font-extrabold leading-[50px]"><span className="">PORTOFOLIO</span></h1>
       {/* <div className='w-[80%] mx-auto flex items-start justify-center space-x-5'> */}
       <div className='w-full lg:w-[80%] mx-auto flex flex-col space-y-[100px]'>

@@ -6,11 +6,12 @@ import Navbar from "@/components/navbar";
 import Partner from "@/components/partner";
 import Portofolio from "@/components/portofolio";
 import Service from "@/components/service";
+import WhatsApp from "@/components/whatsapp";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="text-gray-600 scroll-smooth bg-white flex min-h-screen w-screen flex-col items-center justify-between">
+    <main className=" text-gray-600 scroll-smooth bg-white flex min-h-screen w-screen flex-col items-center justify-between">
       {/* navbar */}
       <Navbar />
       {/* Header */}
@@ -27,6 +28,7 @@ export default function Home() {
       {/* <Partner /> */}
       {/* Footer */}
       <Footer />
+      {/* <WhatsApp /> */}
     </main>
   );
 }
