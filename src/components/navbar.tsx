@@ -35,7 +35,7 @@ function Navbar() {
   return (
     <div className={`${showNavbar===false? "bg-transparent" : "bg-white shadow-sm shadow-gray-200 transition-all ease-in duration-300"} fixed z-50 top-0 left-0 w-screen h-[90px] px-[5vw] flex items-center justify-between`}>
       {/* left */}
-      <a href='#home' className='flex items-center justify-start space-x-2 cursor-pointer'>
+      <a href='#home' className='scale-[0.8] lg:scale-100 flex items-center justify-start space-x-2 cursor-pointer'>
             <Image priority quality={100} alt="image" src={Logo1} width={800} height={500} className='w-[160px] h-[60px]' />
             <h1 className='font-semibold text-lg hover:rotate-[360deg] duration-200'>by</h1>
             <Image priority quality={100} alt="image" src={Logo} width={800} height={500} className='w-[160px] h-[50px]' />
