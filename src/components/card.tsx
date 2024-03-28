@@ -14,15 +14,16 @@ interface Props {
   bandwith: number;
   storage: number;
   socialMedia: boolean;
+  deliveryDays: number;
 }
 
-function Card({name, price, custom, pages, dynamic, uiux, revision, domain, ssl, bandwith, storage, socialMedia}:Props) {
+function Card({deliveryDays, name, price, custom, pages, dynamic, uiux, revision, domain, ssl, bandwith, storage, socialMedia}:Props) {
   const formattedAmount = new Intl.NumberFormat('id-ID', {
     style: 'currency',
     currency: 'IDR'
   }).format(price);
   return (
-<div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+<div className="flex flex-col items-start justify-between w-full min-h-[100vh] max-h-[1sdf] max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
 <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">{name}</h5>
 <div className="flex items-baseline text-gray-700 dark:text-white">
 {custom===true ? (
@@ -34,7 +35,16 @@ function Card({name, price, custom, pages, dynamic, uiux, revision, domain, ssl,
   </>
 )}
 </div>
-<ul role="list" className="space-y-5 my-7">
+<ul role="list" className="space-y-5 my-7 flex-1">
+  {custom===false?(
+<li className="flex items-center">
+<FaRegCircleCheck className="h-5 w-5 text-blue-500" />
+<span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">{deliveryDays} Delivery Days</span>
+</li>
+
+  ):(
+    <></>
+  )}
 <li className="flex items-center">
 <FaRegCircleCheck className="h-5 w-5 text-blue-500" />
 <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">{pages<=8?(<>{pages} Pages</>):(<>Custom Pages</>)}</span>
@@ -49,7 +59,7 @@ function Card({name, price, custom, pages, dynamic, uiux, revision, domain, ssl,
 </li>
 <li className="flex decoration-gray-500">
 <FaRegCircleCheck className="h-5 w-5 text-blue-500" />
-<span className="text-base font-normal leading-tight text-gray-500 ms-3">{dynamic===true?(<>Dynamic Website</>):(<></>)}</span>
+<span className="text-base font-normal leading-tight text-gray-500 ms-3">{dynamic===true?(<>Dynamic Interface</>):(<></>)}</span>
 </li>
 <li className="flex decoration-gray-500">
 <FaRegCircleCheck className="h-5 w-5 text-blue-500" />
@@ -65,7 +75,7 @@ function Card({name, price, custom, pages, dynamic, uiux, revision, domain, ssl,
 </li>
 <li className="flex decoration-gray-500">
 <FaRegCircleCheck className="h-5 w-5 text-blue-500" />
-<span className="text-base font-normal leading-tight text-gray-500 ms-3">{storage<=5?(<>{storage} GB Storage</>):(<>Custom Storage</>)}</span>
+<span className="text-base font-normal leading-tight text-gray-500 ms-3">{storage<=10?(<>{storage} GB Storage</>):(<>Custom Storage</>)}</span>
 </li>
 </ul>
 <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">
